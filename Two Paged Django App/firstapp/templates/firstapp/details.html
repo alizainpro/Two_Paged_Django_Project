@@ -1,0 +1,24 @@
+{% extends 'firstapp/base.html' %}
+{% block title %} First App Index {% endblock %}
+{% block content %}
+    <div class="container">
+        <br>
+    <h1>Welcome to Details of First App!</h1>
+    <p>Click the link in offcanvas navbar to navigate through project!</p>
+    <br>
+    <h2>A Table made through Django Tags</h2>
+    <table class="table">
+        <tr>
+            <th>Name of Company</th>
+            <th>Contact</th>
+        </tr>
+    {% for company in companies %}
+    <tr>
+        <td>{{company.name}}</td>
+        <td>{{company.contact}}</td>
+
+    </tr>
+    {% endfor %}
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'firstapp/css/bootstrap.min.css' %}">
+    <style>
+      .offcanvas-header{
+        background: linear-gradient(to right, #a622e7, rgb(199, 66, 233) ,rgb(172, 55, 255)) !important;
+
+      }
+      .offcanvas-body{
+    background: linear-gradient(to right, #a622e7, rgb(199, 66, 233) ,rgb(172, 55, 255)) !important;
+      }
+      .navbar {
+    
+    background: linear-gradient(to right, rgb(136, 5, 230), rgb(199, 66, 233) ,rgb(172, 55, 255)) !important;
+    background-size: 200% auto;
+    animation: gradientAnimation 1s infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+
+      }
+  }
+    </style>
+
+</head>
+<body>
+    {% block header %}
+    {% include 'firstapp/header.html' %}
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+    {% block footer %}
+    {% include 'firstapp/footer.html' %}
+    {% endblock %}
+    <script src="{% static 'firstapp/js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>

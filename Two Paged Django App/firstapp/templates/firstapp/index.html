@@ -1,0 +1,14 @@
+{% extends 'firstapp/base.html' %}
+{% block title %} First App Index {% endblock %}
+{% block content %}
+    <div class="container">
+        <br>
+    <h1>Welcome to Index of First App!</h1>
+    <p>Click the link in offcanvas navbar to navigate through project!</p>
+    <br>
+    <h2>Some Links made through Django Tags</h2>
+    {% for website in websites %}
+    <a href="{{website.url}}" class="btn btn-primary">{{website.name}}</a>
+    {% endfor %}
+    </div>
+{% endblock %}
